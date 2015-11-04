@@ -1,0 +1,43 @@
+<h1>Flug editieren</h1>
+
+<div ng-show="flugEdit.message">
+	{{ flugEdit.message }}
+</div>
+
+<!-- ng-model-options="{updateOn: 'blur'}" -->
+<form name="form" >
+	<div class="form-group">
+		<label>Id</label>
+		<input ng-model="flugEdit.flug.id" class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label>Datum</label>
+		<input ng-model="flugEdit.flug.datum" name="datum"  class="form-control">
+		<div ng-show="form.datum.invalid">Fehler!!</div>
+		
+	</div>
+
+	<div class="form-group">
+		<label>Von</label>
+		<input ng-model="flugEdit.flug.abflugort" name="abflugort" required ort class="form-control">
+		<div ng-show="form.abflugort.invalid">Fehler!!</div>
+		<div ng-show="form.abflugort.$error.required">Pflichtfeld!!</div>
+		<div ng-show="form.abflugort.$error.ort">Ort wird nicht angeflogen!!</div>
+				
+	</div>
+
+	<div class="form-group">
+		<label>Nach</label>
+		<input ng-model="flugEdit.flug.zielort" name="zielort" required ort class="form-control">
+		<div ng-show="form.zielort.invalid">Fehler!!</div>
+		<div ng-show="form.zielort.$error.required">Pflichtfeld!!</div>
+		<div ng-show="form.zielort.$error.ort">Ort wird nicht angeflogen!!</div>
+		<div ng-show="form.zielort.$pending">Validiere Daten ...</div>
+	</div>
+	
+	<div class="form-group">
+		<input type="button" ng-disabled="form.$invalid"  value="Speichern!" ng-click="flugEdit.save()" class="btn btn-default">
+	</div>	
+
+</form>

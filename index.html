@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+
+      <nav class="navbar navbar-inverse">
+
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Flug-Suchen-App</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a ui-sref="home">Home</a></li>
+              <li><a ui-sref="flug-suchen">Flug suchen</a>  </li>
+          </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        
+        
+        <div ui-view></div>
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+
+        <script>
+            System.import('app').catch(function(err) { console.error(err); });
+        </script>
+  </body>
+</html>
