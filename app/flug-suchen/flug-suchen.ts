@@ -1,21 +1,18 @@
 import { FlugService } from '../flug-service';
-import { Controller } from '../decorators/controller';
+import {WarenkorbService} from '../services/warenkorb-service';
 
-@Controller({
-	selector: 'flugSuchen'
-})
 export class FlugSuchen {
 	
-	von: string;
-	nach: string;
+	von: string = "Graz";
+	nach: string = "Hamburg";
 	fluege;
 	message: string;
-	$log : ng.ILogService;
-	flugService: FlugService;
-	
-	constructor($log: ng.ILogService, flugService: FlugService) {
-		this.$log = $log;
-		this.flugService = flugService;
+	selectedFlug;
+    
+	constructor(
+        private $log: ng.ILogService, 
+        private flugService: FlugService, 
+        private warenkorbService: WarenkorbService) {
 	}
 	
 	suchen() {
@@ -30,6 +27,11 @@ export class FlugSuchen {
 			})
 		
 	}
+    
+    select(flug) {
+       this.selectedFlug = flug; 
+       this.warenkorbService.flug = flug;
+    }
 
 	
 }

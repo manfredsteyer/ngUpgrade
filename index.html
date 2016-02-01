@@ -23,20 +23,44 @@
           <ul class="nav navbar-nav">
               <li><a ui-sref="home">Home</a></li>
               <li><a ui-sref="flug-suchen">Flug suchen</a>  </li>
+              <li><a ui-sref="passagier-suchen">Passagier suchen</a>  </li>
           </ul>
         </div>
     </nav>
     
     <div class="container">
-        
-        
-        <div ui-view></div>
+        <div class="col-sm-9">
+            <div ui-view></div>
+        </div>
+        <div class="col-sm-3">
+            <warenkorb></warenkorb>
+        </div>
+    </div>
 
-        <script src="jspm_packages/system.js"></script>
-        <script src="config.js"></script>
+    <!-- Angular 1.x -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 
-        <script>
-            System.import('app').catch(function(err) { console.error(err); });
-        </script>
+    <!-- Angular 2 -->
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="node_modules/angular2/bundles/upgrade.js"></script>
+
+    <script>
+        
+        System.config({
+            packages: {        
+                app: {
+                format: 'register',
+                defaultExtension: 'js'
+                }
+            }
+        });
+        
+        System.import('app/app').catch(function(err) { console.error(err); });
+    </script>
   </body>
 </html>

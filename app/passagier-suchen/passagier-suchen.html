@@ -1,0 +1,17 @@
+<h1>Passagier suchen (2)</h1>
+
+<div class="form-group">
+	<label>Name</label>
+	<input [(ngModel)]="name" class="form-control">
+</div>
+<div>
+	<input type="button" value="Suchen!" (click)="search()" class="btn">
+</div>
+
+<div *ngFor="#p of passagiere" class="col-sm-4" style="padding:10px;">
+    <passagier-card 
+        [item]='p' 
+        [selectedItem]="selectedPassagier" 
+        (selectedItemChange)="select($event)">
+    </passagier-card>    
+</div>   

@@ -1,0 +1,19 @@
+var common = require("./common/module");
+exports.common = common;
+var params = require("./params/module");
+exports.params = params;
+var path = require("./path/module");
+exports.path = path;
+var resolve = require("./resolve/module");
+exports.resolve = resolve;
+var state = require("./state/module");
+exports.state = state;
+var transition = require("./transition/module");
+exports.transition = transition;
+var url = require("./url/module");
+exports.url = url;
+var view = require("./view/module");
+exports.view = view;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = "ui.router";
+//# sourceMappingURL=ui-router.js.map

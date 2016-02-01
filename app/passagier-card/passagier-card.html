@@ -1,0 +1,12 @@
+
+<div style="padding:20px;" 
+ 	 ng-style="{'background-color': (vm.selectedItem.id == vm.item.id) ? 'orange' : 'lightsteelblue' }" >
+
+	<h2>{{vm.item.vorname}} {{vm.item.name}} (1)</h2>
+    <p>
+        Passagier-Status: {{ vm.item.passagierStatus }}
+    </p>
+    <p>
+        <input type="button" class="btn" value="Auswählen" ng-click="vm.select()">
+    </p>
+</div>

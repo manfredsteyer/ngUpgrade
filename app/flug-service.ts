@@ -1,6 +1,3 @@
-import { Injectable } from 'decorators/injectable';
-
-@Injectable({})
 export class FlugService {
 	
 	$http: ng.IHttpService;

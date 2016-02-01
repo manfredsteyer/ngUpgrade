@@ -1,9 +1,5 @@
 import {FlugService} from '../flug-service';
-import { Controller } from '../decorators/controller';
 
-@Controller({
-	selector: 'flugEdit'
-})
 export class FlugEdit {
 	
 	id;

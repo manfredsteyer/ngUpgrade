@@ -1,0 +1,71 @@
+<h1><code ng:non-bindable="">$transitionProvider</code>
+<div><span class="hint">service in module <code ng:non-bindable="">ui.router.state</code>
+</span>
+</div>
+</h1>
+<div><div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_entering">entering(matchObject, callback)</h3>
+<div class="entering"><div class="ui-router-state-transitionprovider-entering-page"><p>Registers a function to be injected and invoked during a transition between the matched &#39;to&#39; and &#39;from&#39; states,
+when the matched &#39;to&#39; state is being entered. This function is in injected with the entering state&#39;s resolves.</p>
+<p>This function can be injected with two additional special value:
+- <strong><code>$transition$</code></strong>: The current transition
+- <strong><code>$state$</code></strong>: The state being entered</p>
+</div><h5 id="methods_entering_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>matchObject</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-transitionprovider-entering-page"><p>See transitionCriteria in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-transitionprovider-entering-page"><p>See callback in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_exiting">exiting(matchObject, callback)</h3>
+<div class="exiting"><div class="ui-router-state-transitionprovider-exiting-page"><p>Registers a function to be injected and invoked during a transition between the matched &#39;to&#39; and &#39;from states,
+when the matched &#39;from&#39; state is being exited. This function is in injected with the exiting state&#39;s resolves.</p>
+<p>This function can be injected with two additional special value:
+- <strong><code>$transition$</code></strong>: The current transition
+- <strong><code>$state$</code></strong>: The state being entered</p>
+</div><h5 id="methods_exiting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>matchObject</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-transitionprovider-exiting-page"><p>See transitionCriteria in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-transitionprovider-exiting-page"><p>See callback in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_on">on(matchObject, callback)</h3>
+<div class="on"><div class="ui-router-state-transitionprovider-on-page"><p>Registers a function to be injected and invoked when a transition between the matched &#39;to&#39; and &#39;from&#39; states
+starts.  This function can be injected with one additional special value:
+- <strong><code>$transition$</code></strong>: The current transition</p>
+</div><h5 id="methods_on_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>matchObject</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-transitionprovider-on-page"><p>An object that specifies which transitions to invoke the callback for.</p>
+<ul>
+<li><strong><code>to</code></strong> - {string|function=} - A glob string that matches the &#39;to&#39; state&#39;s name.
+ Or, a function with the signature <code>function(state) {}</code> which should return a boolean to indicate if the state matches.</li>
+<li><strong><code>from</code></strong> - {string|function=} - A glob string that matches the &#39;from&#39; state&#39;s name.
+ Or, a function with the signature <code>function(state) {}</code> which should return a boolean to indicate if the state matches.</li>
+</ul>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-transitionprovider-on-page"><p>The function which will be injected and invoked, when a matching transition is started.
+The function may optionally return a {boolean|Transition|object} value which will affect the current transition:</p>
+<ul>
+<li><strong><code>false</code></strong> to abort the current transition</li>
+<li><strong>{Transition}</strong> A Transition object from the $transition$.redirect() factory. If returned, the
+ current transition will be aborted and the returned Transition will supersede it.</li>
+<li><strong>{object}</strong> A map of resolve functions to be added to the current transition. These resolves will be made
+ available for injection to further steps in the transition.  The object should have {string}s for keys and
+ {function}s for values, like the <code>resolve</code> object in <a href="#/api/ui.router.state.$stateProvider#state">$stateProvider.state</a>.</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_onerror">onError(matchObject, callback)</h3>
+<div class="onerror"><div class="ui-router-state-transitionprovider-onerror-page"><p>Registers a function to be injected and invoked when a transition has failed for any reason between the matched
+&#39;to&#39; and &#39;from&#39; state. The transition rejection reason is injected as <code>$error$</code>.</p>
+</div><h5 id="methods_onerror_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>matchObject</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-transitionprovider-onerror-page"><p>See transitionCriteria in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-transitionprovider-onerror-page"><p>The function which will be injected and invoked, when a matching transition is started.
+The function&#39;s return value is ignored.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_onsuccess">onSuccess(matchObject, callback)</h3>
+<div class="onsuccess"><div class="ui-router-state-transitionprovider-onsuccess-page"><p>Registers a function to be injected and invoked when a transition has successfully completed between the matched
+&#39;to&#39; and &#39;from&#39; state is being exited.
+This function is in injected with the &#39;to&#39; state&#39;s resolves (note: <code>JIT</code> resolves are not injected).</p>
+<p>This function can be injected with two additional special value:
+- <strong><code>$transition$</code></strong>: The current transition</p>
+</div><h5 id="methods_onsuccess_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>matchObject</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ui-router-state-transitionprovider-onsuccess-page"><p>See transitionCriteria in <a href="#/api/ui.router.state.$transitionProvider#on">$transitionProvider.on</a>.</p>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ui-router-state-transitionprovider-onsuccess-page"><p>The function which will be injected and invoked, when a matching transition is started.
+The function&#39;s return value is ignored.</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

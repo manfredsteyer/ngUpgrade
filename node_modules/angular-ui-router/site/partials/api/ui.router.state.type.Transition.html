@@ -1,0 +1,89 @@
+<h1><code ng:non-bindable="">Transition</code>
+<div><span class="hint">type in module <code ng:non-bindable="">ui.router.state</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ui-router-state-type-page ui-router-state-type-transition-page"><p>Represents a transition between two states, and contains all contextual information about the
+to/from states and parameters, as well as the list of states being entered and exited as a
+result of this transition.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">Transition(from, to, options);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>from</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-page"><p>The origin <a href="#/api/ui.router.state.$stateProvider#state">state</a> from which the transition is leaving.</p>
+</div></td></tr><tr><td>to</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-page"><p>The target <a href="#/api/ui.router.state.$stateProvider#state">state</a> being transitioned to.</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-page"><p>An object hash of the options for this transition.</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-page"><p>New <code>Transition</code> object</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_entering">entering()</h3>
+<div class="entering"><div class="ui-router-state-type-page ui-router-state-type-transition-entering-page"><p>Gets the states being entered.</p>
+</div><h5 id="methods_entering_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-entering-page"><p>Returns an array of states that will be entered in this transition.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_exiting">exiting()</h3>
+<div class="exiting"><div class="ui-router-state-type-page ui-router-state-type-transition-exiting-page"><p>Gets the states being exited.</p>
+</div><h5 id="methods_exiting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-exiting-page"><p>Returns an array of states that will be exited in this transition.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_from">from()</h3>
+<div class="from"><div class="ui-router-state-type-page ui-router-state-type-transition-from-page"><p>Returns the origin state of the current transition, as passed to the <code>Transition</code> constructor.</p>
+</div><h5 id="methods_from_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-from-page"><p>The origin <a href="#/api/ui.router.state.$stateProvider#state">state</a> of the transition.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_state">state()</h3>
+<div class="state"><div class="ui-router-state-type-page ui-router-state-type-transition-from-state-page"><p>Returns the object definition of the origin state of the current transition.</p>
+</div><h5 id="methods_state_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-from-state-page"><p>The origin <a href="#/api/ui.router.state.$stateProvider#state">state</a> of the transition.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ignored">ignored()</h3>
+<div class="ignored"><div class="ui-router-state-type-page ui-router-state-type-transition-ignored-page"><p>Indicates whether the transition should be ignored, based on whether the to and from states are the
+same, and whether the <code>reload</code> option is set.</p>
+</div><h5 id="methods_ignored_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-ignored-page"><p>Whether the transition should be ignored.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_is">is()</h3>
+<div class="is"><div class="ui-router-state-type-page ui-router-state-type-transition-is-page"><p>Determines whether two transitions are equivalent.</p>
+</div></div>
+</li>
+<li><h3 id="methods_options">options()</h3>
+<div class="options"><div class="ui-router-state-type-page ui-router-state-type-transition-options-page"><p>Returns all options passed to the constructor of this <code>Transition</code>.</p>
+</div></div>
+</li>
+<li><h3 id="methods_params">params()</h3>
+<div class="params"><div class="ui-router-state-type-page ui-router-state-type-transition-params-page"><p>Gets the origin and target parameters for the transition.</p>
+</div><h5 id="methods_params_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-params-page"><p>An object with <code>to</code> and <code>from</code> keys, each of which contains an object hash of
+state parameters.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_previous">previous()</h3>
+<div class="previous"><div class="ui-router-state-type-page ui-router-state-type-transition-previous-page"><p>Gets the previous transition from which this transition was redirected.</p>
+</div><h5 id="methods_previous_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-previous-page"><p>A <code>Transition</code> instance, or <code>null</code>.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_redirect">redirect()</h3>
+<div class="redirect"><div class="ui-router-state-type-page ui-router-state-type-transition-redirect-page"><p>Creates a new transition that is a redirection of the current one. This transition can
+be returned from a <code>$transitionProvider</code> hook, <code>$state</code> event, or other method, to
+redirect a transition to a new state and/or set of parameters.</p>
+</div><h5 id="methods_redirect_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-transition">Transition</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-redirect-page"><p>Returns a new <code>Transition</code> instance.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_retained">retained()</h3>
+<div class="retained"><div class="ui-router-state-type-page ui-router-state-type-transition-retained-page"><p>Gets the states being retained.</p>
+</div><h5 id="methods_retained_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-retained-page"><p>Returns an array of states that were entered in a previous transition that
+will not be exited.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_to">to()</h3>
+<div class="to"><div class="ui-router-state-type-page ui-router-state-type-transition-to-page"><p>Returns the target state of the current transition, as passed to the <code>Transition</code> constructor.</p>
+</div><h5 id="methods_to_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-to-page"><p>The target <a href="#/api/ui.router.state.$stateProvider#state">state</a> of the transition.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_state">state()</h3>
+<div class="state"><div class="ui-router-state-type-page ui-router-state-type-transition-to-state-page"><p>Returns the object definition of the target state of the current transition.</p>
+</div><h5 id="methods_state_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-transition-to-state-page"><p>The target <a href="#/api/ui.router.state.$stateProvider#state">state</a> of the transition.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

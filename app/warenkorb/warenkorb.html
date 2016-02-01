@@ -1,0 +1,22 @@
+
+<div class="panel panel-default">
+
+  <div class="panel-heading">Ihr Warenkorb</div>
+
+  <ul class="list-group">
+
+    <li *ngIf="!flug && !passagier" class="list-group-item">
+        Ihr Warenkorb ist leer.
+    </li>      
+
+      
+    <li *ngIf="flug" class="list-group-item">
+        <b>Flug: </b>{{flug?.abflugort}} - {{flug?.zielort}}
+    </li>      
+
+    <li *ngIf="passagier" class="list-group-item">
+        <b>Passagier: </b>{{passagier?.vorname}} {{passagier?.name}}
+    </li>      
+    
+  </ul>
+</div>

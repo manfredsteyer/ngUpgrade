@@ -1,0 +1,37 @@
+<h1><code ng:non-bindable="">State</code>
+<div><span class="hint">type in module <code ng:non-bindable="">ui.router.state</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ui-router-state-type-page ui-router-state-type-state-page"><p>Definition object for states. Includes methods for manipulating the state heirarchy.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">State(config);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-page"><p>A configuration object hash that includes the results of user-supplied
+values, as well as values from <code>StateBuilder</code>.</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-page"><p>Returns a new <code>State</code> object.</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_fqn">fqn()</h3>
+<div class="fqn"><div class="ui-router-state-type-page ui-router-state-type-state-fqn-page"><p>Returns the fully-qualified name of the state, based on its current position in the tree.</p>
+</div><h5 id="methods_fqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-fqn-page"><p>Returns a dot-separated name of the state.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_is">is(ref)</h3>
+<div class="is"><div class="ui-router-state-type-page ui-router-state-type-state-is-page"><p>Compares the identity of the state against the passed value, which is either an object
+reference to the actual <code>State</code> instance, the original definition object passed to
+<code>$stateProvider.state()</code>, or the fully-qualified name.</p>
+</div><h5 id="methods_is_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>ref</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-is-page"><p>Can be one of (a) a <code>State</code> instance, (b) an object that was passed
+into <code>$stateProvider.state()</code>, (c) the fully-qualified name of a state as a string.</p>
+</div></td></tr></tbody></table><h5 id="methods_is_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-is-page"><p>Returns <code>true</code> if <code>ref</code> matches the current <code>State</code> instance.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_root">root()</h3>
+<div class="root"><div class="ui-router-state-type-page ui-router-state-type-state-root-page"><p>Returns the root node of this state&#39;s tree.</p>
+</div><h5 id="methods_root_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-state">State</a></td><td><div class="ui-router-state-type-page ui-router-state-type-state-root-page"><p>The root of this state&#39;s tree.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

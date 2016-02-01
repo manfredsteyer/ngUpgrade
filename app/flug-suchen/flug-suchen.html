@@ -1,4 +1,4 @@
-<h1>Flug suchen</h1>
+<h1>Flug suchen (1)</h1>
 
 <div class="form-group">
 	<label>Von</label>
@@ -14,17 +14,27 @@
 	<input type="button" value="Suchen!" ng-click="flugSuchen.suchen()" class="btn">
 </div>
 
+<!--
 <table ng-show="flugSuchen.fluege.length > 0" class="table table-striped"> 
 	
-	<tr ng-repeat="f in flugSuchen.fluege">
+	<tr ng-repeat="f in flugSuchen.fluege" ng-class="{active: f.id == flugSuchen.selectedFlug.id}">
 		<td>{{ f.datum | date }}</td>
 		<td>{{ f.id  }}</td>
 		<td>{{ f.zielort | ort:'long'  }}</td>
 		<td>{{ f.abflugort | ort:'short'  }}</td> 
 		<td>
 			<a ui-sref="flug-edit({id: f.id})">Editieren</a>
-			
+            | <a style="cursor:pointer" ng-click="flugSuchen.select(f)">Auswählen</a>
 		</td>                       
 	</tr>
 	
 </table>
+-->
+
+<div class="col-sm-4" style="padding:10px;" ng-repeat="f in flugSuchen.fluege">
+    <flug-card 
+        [item]="f" 
+        [selected-item]="flugSuchen.selectedFlug"
+        (selected-item-change)="flugSuchen.select($event)">
+    </flug-card>
+</div>
