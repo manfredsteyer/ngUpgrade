@@ -8,7 +8,7 @@ Die nachfolgende Übersicht zeigt, wie diese Beispielanwendung Komponenten aus A
 
 ## Download
 
-Führen sie nach dem Download den folgenden Befehl im Root der Anwendung aus, um die benötigten Bibliotheken via ``npm`` ui erhalten:
+Führen sie nach dem Download den folgenden Befehl im Root der Anwendung aus, um die benötigten Bibliotheken via ``npm`` zu erhalten:
 
 ```
 npm install
